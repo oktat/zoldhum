@@ -113,7 +113,7 @@ Belépéshez a következő adatok szükségesek JSON formátumban:
 ```json
 {
     "email": "valaki@zold.lan",
-    "password": titok"
+    "password": "titok"
 }
 ```
 
