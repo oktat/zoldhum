@@ -100,6 +100,10 @@ php artisan serve
 
 ## Felhasználó regisztrálása
 
+| Végpont | Metódus |
+|-|-|
+| /api/register | POST |
+
 A következő adatokat kell elküldenünk JSON formátumban:
 
 ```json
@@ -112,6 +116,10 @@ A következő adatokat kell elküldenünk JSON formátumban:
 ```
 
 ## Belépés
+
+| Végpont | Metódus |
+|-|-|
+| /api/login | POST |
 
 Belépéshez a következő adatok szükségesek JSON formátumban:
 
