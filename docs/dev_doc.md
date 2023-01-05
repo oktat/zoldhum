@@ -3,7 +3,7 @@
 ## Továbbfejlesztés
 
 ```bash
-git clone https://github.com/andteki/zoldhum.git
+git clone https://github.com/oktat/zoldhum.git
 cd zoldhum
 composer install
 npm install
@@ -22,3 +22,52 @@ A routingban van beállítva csoportosan a sanctum azonosítás, a post, put és
 A position végpont számára nincs külön beállítva semmi, a Route::apiResource() metódus biztosítja a metódusokat.
 
 Az app/Http/Controllers/EmployeeController osztály írja le az employees végpontra való reakciókat.
+
+## Táblák
+
+### Az employees tábla
+
+```php
+Schema::create('employees', function (Blueprint $table) {
+    $table->id();
+    $table->string('name');
+    $table->string('city');
+    $table->decimal('salary', 5, 2);
+    $table->integer('positionId')->nullable();
+    $table->timestamps();
+});
+```
+
+### A positions tábla
+
+```php
+Schema::create('positions', function (Blueprint $table) {
+    $table->id();
+    $table->string('name');
+    $table->timestamps();
+});
+```
+
+## Kontrollerek
+
+### EmployeeController
+
+Az EmployeeController kezeli az employee táblát.
+
+| Metódusok | Leírás |
+|-|-|
+| index() | dolgozók megjelenítése |
+| store() | új dolgozók megjelenítése |
+| update() | dolgozó adatainak frissítése |
+| destroy() | dolgozó törlése |
+
+### PositionController
+
+Az PositionController kezeli az position táblát.
+
+| Metódusok | Leírás |
+|-|-|
+| index() | pozíció megjelenítése |
+| store() | új pozíció megjelenítése |
+| update() | pozíció adatainak frissítése |
+| destroy() | pozíció törlése |
