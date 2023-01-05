@@ -134,6 +134,8 @@ Belépéshez a következő adatok szükségesek JSON formátumban:
 
 Ha szükség van azonosításra egy végponthoz, akkor el kell küldenünk a bejelentkezéskor kapott tokent.
 
+## Dolgozók kezelése
+
 ### Új dolgozó felvétele
 
 | Végpont | Metódus |
@@ -189,3 +191,37 @@ Adatokat nem kell küldeni, csak a Bearer tokent, például:
 ```txt
 Sh0b4ZqyNPqIsI94heEj4JuttnGVfz0HATPaM9dC
 ```
+
+## Pozíciók kezelése
+
+### Pozíciók lekérdezése
+
+| Végpont | Metódus |
+|-|-|
+| /api/positons/ | GET |
+
+Jelenleg nem szükséges azonosítás.
+
+### Pozíció felvétele
+
+| Végpont | Metódus |
+|-|-|
+| /api/positons/ | POST |
+
+Jelenleg nem szükséges azonosítás.
+
+### Pozíciók módosítása
+
+| Végpont | Metódus |
+|-|-|
+| /api/positons/{id} | PUT |
+
+Jelenleg nem szükséges azonosítás.
+
+### Pozíciók törlése
+
+| Végpont | Metódus |
+|-|-|
+| /api/positons/{id} | DELETE |
+
+Jelenleg nem szükséges azonosítás.
