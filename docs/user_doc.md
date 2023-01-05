@@ -210,11 +210,27 @@ Jelenleg nem szükséges azonosítás.
 
 Jelenleg nem szükséges azonosítás.
 
+JSON adatként kell megadni:
+
+```json
+{
+  "name": "valami"
+}
+```
+
 ### Pozíciók módosítása
 
 | Végpont | Metódus |
 |-|-|
 | /api/positons/{id} | PUT |
+
+Az új adatot JSON formátumban kell megadni:
+
+```json
+{
+  "name": "valami"
+}
+```
 
 Jelenleg nem szükséges azonosítás.
 
@@ -223,5 +239,7 @@ Jelenleg nem szükséges azonosítás.
 | Végpont | Metódus |
 |-|-|
 | /api/positons/{id} | DELETE |
+
+Nem szükséges adat küldése, hogy mit törlünk a végpont végén adjuk meg.
 
 Jelenleg nem szükséges azonosítás.
