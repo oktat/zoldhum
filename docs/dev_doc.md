@@ -71,3 +71,13 @@ Az PositionController kezeli az position táblát.
 | store() | új pozíció megjelenítése |
 | update() | pozíció adatainak frissítése |
 | destroy() | pozíció törlése |
+
+### AuthController
+
+Az AuthController kezeli a felhasználó felvételét, beléptetését és a kiléptetést.
+
+| Metódusok | Leírás |
+|-|-|
+| register() | felhasználó felvétel |
+| login() | felhasználó beléptetése |
+| logout() | felhasználó kiléptetése |
