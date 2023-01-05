@@ -1,5 +1,9 @@
 # Felhasználói dokumentáció
 
+## Bevezetés
+
+A zoldhum egy dolgozó nyilvántartó rendszer, amit REST API felületet biztosít.
+
 ## Követelmények
 
 * Telepítve:
@@ -138,6 +142,40 @@ JSON formátumban a dolgozók adatai:
 ```
 
 Például Bearer token:
+
+```txt
+Sh0b4ZqyNPqIsI94heEj4JuttnGVfz0HATPaM9dC
+```
+
+### Dolgozó adatainak javítása
+
+| Végpont | Metódus |
+|-|-|
+| /api/employees/{id} | PUT |
+
+Az új adatokat JSON formátumban küldjük:
+
+```JSON
+{
+  "name": "Valaki",
+  "city": "Valahol",
+  "salary": 305
+}
+```
+
+Bearer token küldése, például:
+
+```txt
+Sh0b4ZqyNPqIsI94heEj4JuttnGVfz0HATPaM9dC
+```
+
+### Dolgozó törlése
+
+| Végpont | Metódus |
+|-|-|
+| /api/employees/{id} | DELETE |
+
+Adatokat nem kell küldeni, csak a Bearer tokent, például:
 
 ```txt
 Sh0b4ZqyNPqIsI94heEj4JuttnGVfz0HATPaM9dC
