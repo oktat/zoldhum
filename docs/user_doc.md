@@ -125,10 +125,18 @@ Belépéshez a következő adatok szükségesek JSON formátumban:
 
 ```json
 {
-    "email": "valaki@zold.lan",
+    "name": "valaki",
     "password": "titok"
 }
 ```
+
+Visszakapunk egy ehhez hasonló választ:
+
+```json
+{
+  "token": "2|Sh0b4ZqyNPqIsI94heEj4JuttnGVfz0HATPaM9dC",
+  "name": "valaki"
+}
 
 ## Azonosítás a végpontoknál
 
