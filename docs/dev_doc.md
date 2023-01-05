@@ -1,5 +1,9 @@
 # Fejlesztői dokumentáció
 
+## Bevezetés
+
+Ez egy REST API, ami Laravel Framework 8.79.0 verzióval készült. Dolgozók és pozíciójuk nyilvantartására használható.
+
 ## Továbbfejlesztés
 
 ```bash

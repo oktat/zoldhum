@@ -3,6 +3,7 @@
 ## Bevezetés
 
 A zoldhum egy dolgozó nyilvántartó rendszer, amit REST API felületet biztosít.
+A Laravel Framework 8.79.0 verzióval készült.
 
 ## Követelmények
 
