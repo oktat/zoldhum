@@ -137,6 +137,7 @@ Visszakapunk egy ehhez hasonló választ:
   "token": "2|Sh0b4ZqyNPqIsI94heEj4JuttnGVfz0HATPaM9dC",
   "name": "valaki"
 }
+```
 
 ## Azonosítás a végpontoknál
 
