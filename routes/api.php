@@ -23,14 +23,21 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('employees', [EmployeeController::class, 'index']);
+Route::get('employees/{id}', [EmployeeController::class, 'show']);
+
+Route::post('/employees', [EmployeeController::class, 'store']);
+Route::put('/employees/{id}', [EmployeeController::class, 'update']);
+Route::patch('/employees/{id}', [EmployeeController::class, 'update']);
+Route::delete('/employees/{id}', [EmployeeController::class, 'destroy']);
+
 
 Route::group(['middleware' => ['auth:sanctum']], function () {
-    Route::post('/employees', [EmployeeController::class, 'store']);
-    Route::put('/employees/{id}', [EmployeeController::class, 'update']);
-    Route::delete('/employees/{id}', [EmployeeController::class, 'destroy']);        
+    
 });
 
 Route::post('/register', [AuthController::class, 'register']);
 Route::post('/login', [AuthController::class, 'login']);
 
 Route::apiResource('positions', PositionController::class);
+
+

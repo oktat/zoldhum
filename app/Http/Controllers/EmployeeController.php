@@ -33,7 +33,14 @@ class EmployeeController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store() {
+        try {
+            return $this->tryStore(request());
+        } catch (\Exception $e) {
+            return "{\"success\": false}";
+        }
+    }
+    public function tryStore(Request $request)
     {
         return Employee::create($request->all());
     }
@@ -46,7 +53,7 @@ class EmployeeController extends Controller
      */
     public function show($id)
     {
-        //
+        return Employee::find($id);
     }
 
     /**
@@ -79,9 +86,22 @@ class EmployeeController extends Controller
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
+     */    
+    public function destroy() {
+        try {
+            return $this->tryDestroy(request('id'));
+        } catch (\Exception $e) {
+            return "{\"success\": false}";
+        }
+    }
+
+     public function tryDestroy($id)
     {
-        return Employee::destroy($id);
+        $res = Employee::destroy($id);
+        if ($res) {
+            return "{\"success\": true}";
+        }else {
+            return "{\"success\": false}";
+        }
     }
 }
