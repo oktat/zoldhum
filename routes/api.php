@@ -34,7 +34,11 @@ Route::post('/employees', [EmployeeController::class, 'store']);
 
 
 Route::group(['middleware' => ['auth:sanctum']], function () {
+<<<<<<< HEAD
 >>>>>>> bc1f991baf83df64225b77804aad3006c43784b7
+=======
+>>>>>>> bc1f991 (A dolgozókhoz letöltődik a beosztásuk is.)
+>>>>>>> 3ddc610 (Az api.php változásai hozzádva)
     Route::put('/employees/{id}', [EmployeeController::class, 'update']);
     Route::patch('/employees/{id}', [EmployeeController::class, 'update']);
     Route::delete('/employees/{id}', [EmployeeController::class, 'destroy']);    
