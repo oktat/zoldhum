@@ -14,10 +14,6 @@ class EmployeeController extends Controller
      */
     public function index()
     {
-<<<<<<< HEAD
-=======
-        // return Employee::all();
->>>>>>> 3ddc610 (Az api.php változásai hozzádva)
         return Employee::with('position')->get();
     }
 
