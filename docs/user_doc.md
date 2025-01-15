@@ -63,7 +63,7 @@ Hozzunk létre egy ilyen sort (célszerűen a #DB_CONNECTION=mysql sor felett)
 DB_CONNECTION=sqlite
 ```
 
-Generáljuk le az adatábzistáblákat:
+Generáljuk le az adatábzis táblákat:
 
 ```cmd
 php artisan migrate
@@ -90,8 +90,8 @@ php artisan serve
 | /api/register      | post    | nem        |             |        |
 | /api/login         | post    | nem        |             | 401    |
 | /api/employees | get     | nem        | 200 OK      | 400 Bad Request, 404 Not Found |
-| /api/employees | post    | igen       | 200 OK      |
-| /api/employees/{id} | put     | igen       | 201 Created |
+| /api/employees | post    | igen       | 201 OK      | |
+| /api/employees/{id} | put     | igen       | 200 | |
 | /api/employees/{id} | delete  | igen       |             |        |
 | /api/positions | get     | nem        |             |        |
 | /api/positions | post    | nem        |             |        |
